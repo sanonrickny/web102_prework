@@ -145,14 +145,19 @@ allBtn.addEventListener("click", showAllGames);
 // grab the description container
 const descriptionContainer = document.getElementById("description-container");
 
-// use filter or reduce to count the number of unfunded games
+// Use filter or reduce to count the number of unfunded games
+let total_games_unfunded = GAMES_JSON.filter(game => game.pledged < game.goal).length;
+let total_games_raised = GAMES_JSON.length - total_games_unfunded;
+let total_amount_raised = GAMES_JSON.reduce((total, game) => total + game.pledged, 0);
 
-
-// create a string that explains the number of unfunded games using the ternary operator
-
+// Create a string that explains the number of unfunded games using the ternary operator
+const newParagraph = document.createElement("p");
+newParagraph.textContent = `A total of ${total_amount_raised.toLocaleString()} has been 
+raised for ${total_games_raised} games. Currently, ${total_games_unfunded} game(s)
+remain unfunded. We need your help to fund these amazing games!`;
 
 // create a new DOM element containing the template string and append it to the description container
-
+descriptionContainer.appendChild(newParagraph);
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
  * Skills used: spread operator, destructuring, template literals, sort 
@@ -166,7 +171,22 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
 });
 
 // use destructuring and the spread operator to grab the first and second games
-
+const [topGame, runnerUp] = sortedGames;
 // create a new element to hold the name of the top pledge game, then append it to the correct element
-
+const topGameElement = document.createElement("div");
+topGameElement.innerHTML = `
+    <h2>${topGame.name}</h2>
+    <p>Backers: ${topGame.backers.toLocaleString()}</p>
+    <p>Pledged: $${topGame.pledged.toLocaleString()}</p>
+    <p>Goal: $${topGame.goal.toLocaleString()}</p>
+`;
+firstGameContainer.appendChild(topGameElement);
 // do the same for the runner up item
+const runnerUpElement = document.createElement("div");
+runnerUpElement.innerHTML = `
+    <h2>${runnerUp.name}</h2>
+    <p>Backers: ${runnerUp.backers.toLocaleString()}</p>
+    <p>Pledged: $${runnerUp.pledged.toLocaleString()}</p>
+    <p>Goal: $${runnerUp.goal.toLocaleString()}</p>
+`;
+secondGameContainer.appendChild(runnerUpElement);
