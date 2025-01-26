@@ -18,7 +18,7 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://www.loom.com/share/04f9c957216a491db966742f39b28779' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 place this with whatever GIF tool you used! -->
