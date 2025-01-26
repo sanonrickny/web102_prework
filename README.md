@@ -18,7 +18,7 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented features:
 
-<img src="https://www.loom.com/share/04f9c957216a491db966742f39b28779" title='Video Walkthrough' width='' alt='Video Walkthrough' />
+[![Video Walkthrough](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://www.loom.com/share/04f9c957216a491db966742f39b28779 "Video Walkthrough")
 
 
 place this with whatever GIF tool you used! -->
