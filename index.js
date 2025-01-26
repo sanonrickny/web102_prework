@@ -176,17 +176,21 @@ const [topGame, runnerUp] = sortedGames;
 const topGameElement = document.createElement("div");
 topGameElement.innerHTML = `
     <h2>${topGame.name}</h2>
-    <p>Backers: ${topGame.backers.toLocaleString()}</p>
-    <p>Pledged: $${topGame.pledged.toLocaleString()}</p>
-    <p>Goal: $${topGame.goal.toLocaleString()}</p>
 `;
 firstGameContainer.appendChild(topGameElement);
 // do the same for the runner up item
 const runnerUpElement = document.createElement("div");
 runnerUpElement.innerHTML = `
     <h2>${runnerUp.name}</h2>
-    <p>Backers: ${runnerUp.backers.toLocaleString()}</p>
-    <p>Pledged: $${runnerUp.pledged.toLocaleString()}</p>
-    <p>Goal: $${runnerUp.goal.toLocaleString()}</p>
 `;
 secondGameContainer.appendChild(runnerUpElement);
+
+document.getElementById('add-name-btn').addEventListener('click', function() {
+    const nameInput = document.getElementById('name-input');
+    nameInput.style.display = 'block';
+    nameInput.addEventListener('change', function() {
+        const nameDisplay = document.getElementById('name-display');
+        nameDisplay.textContent = `Your name is ${nameInput.value}`;
+        nameInput.style.display = 'none';
+    });
+});
