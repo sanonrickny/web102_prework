@@ -18,8 +18,7 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented features:
 
-[![Video Walkthrough]()](https://www.loom.com/share/04f9c957216a491db966742f39b28779 "Video Walkthrough")
-
+[Video Walkthrough - Click here to open in a new tab](https://www.loom.com/share/04f9c957216a491db966742f39b28779)
 
 place this with whatever GIF tool you used! -->
 
